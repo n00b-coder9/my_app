@@ -1,0 +1,20 @@
+{
+  "name": "faiz_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "concurrently --kill-others-on-fail \"cd ./client && npm install\" \"cd ./server && npm install\"",
+    "start-client": "cd ./client && npm start",
+    "start-server": "cd ./server && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run start-server\" \"npm run start-client\"",
+    "start": "npm run start-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
+  }
+}
